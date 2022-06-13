@@ -26,13 +26,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-@import '~@/styles/variables.scss';
-
-.wall {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: $spacing-sm;
-}
-</style>
