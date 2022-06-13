@@ -3,6 +3,8 @@
 ## Project setup
 ```
 npm install
+create .env file
+add VUE_APP_VK_TOKEN in this file with your own VK access_token
 ```
 
 ### Compiles and hot-reloads for development
