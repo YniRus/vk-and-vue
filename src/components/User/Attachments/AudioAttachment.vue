@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { VK_API } from '@/services/vkApi';
+
 export default {
   name: 'AudioAttachment',
 
@@ -22,7 +24,7 @@ export default {
 
   methods: {
     getAudio() {
-      return `https://vk.com/audio${this.attachment.audio.owner_id}_${this.attachment.audio.id}`;
+      return `${VK_API.baseUrl}/audio${this.attachment.audio.owner_id}_${this.attachment.audio.id}`;
     },
 
     getTitle() {
@@ -33,8 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~@/styles/variables.scss';
-
 .audio-attachment {
   a {
     text-decoration: none;

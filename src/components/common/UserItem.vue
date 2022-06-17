@@ -82,7 +82,7 @@ export default {
   }
 
   &__extra-info {
-    font-size: 12px;
+    font-size: $fs-sm;
   }
 }
 </style>

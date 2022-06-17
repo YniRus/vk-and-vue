@@ -1,11 +1,10 @@
 <template>
   <div class="wall">
-    <template v-for="(item, index) of items">
-      <WallItem
-        :item="item"
-        :key="`wall-item-${index}`"
-      />
-    </template>
+    <WallItem
+      v-for="(item, index) of items"
+      :item="item"
+      :key="`wall-item-${index}`"
+    />
   </div>
 </template>
 

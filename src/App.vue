@@ -7,7 +7,6 @@
 </template>
 
 <style lang="scss">
-@import '~@/styles/variables.scss';
 @import '~@/styles/base.scss';
 
 #app {

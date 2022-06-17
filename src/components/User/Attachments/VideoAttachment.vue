@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { VK_API } from '@/services/vkApi';
+
 export default {
   name: 'VideoAttachment',
 
@@ -19,7 +21,7 @@ export default {
 
   methods: {
     getVideo() {
-      return `https://vk.com/video${this.attachment.video.owner_id}_${this.attachment.video.id}`;
+      return `${VK_API.baseUrl}/video${this.attachment.video.owner_id}_${this.attachment.video.id}`;
     },
 
     getVideoPreview() {

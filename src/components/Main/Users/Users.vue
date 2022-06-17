@@ -12,8 +12,8 @@
     />
 
     <BuildFriendsListButton
-      @build="onFriendsListBuild"
       :disabled="!selectedUsers.length"
+      @build="onFriendsListBuild"
     />
   </div>
 </template>

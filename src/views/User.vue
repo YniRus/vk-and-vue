@@ -19,6 +19,7 @@
         <Button @click="navigate('Main')">На главную</Button>
       </div>
     </div>
+
     <div class="user-block fill">
       <Wall
         class="user-block__content fill"
@@ -29,7 +30,7 @@
 </template>
 
 <script>
-import { HTTP } from '@/services/http';
+import { VK_API } from '@/services/vkApi';
 
 import FriendItem from '@/components/common/FriendItem';
 import Button from '@/components/common/Button';
@@ -72,13 +73,14 @@ export default {
     },
 
     async getUserWall() {
-      const response = await HTTP.vk('wall.get', {
-        owner_id: this.user.id,
-        count: 20,
-      });
+      const { error, items } = await VK_API.getUserWall(this.user.id);
 
-      response?.error && this.onError(response?.error?.error_msg);
-      response?.response && this.setWall(response?.response?.items);
+      error && this.onError(error);
+      items?.length && this.setWall(items);
+    },
+
+    onError(error) {
+      alert(error);
     },
   },
 };

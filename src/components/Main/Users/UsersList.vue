@@ -5,8 +5,8 @@
         :key="`user-item-${index}`"
         :user="user"
         :class="{
-        'user-item_selected': selectedUsers.includes(user.id),
-      }"
+          'user-item_selected': selectedUsers.includes(user.id),
+        }"
         @click.native="onUserCheck(user.id)"
       >
       </UserItem>
@@ -84,7 +84,7 @@ export default {
     margin-left: auto;
     margin-right: $spacing-md;
     background-color: $col-danger;
-    font-size: 20px;
+    font-size: $fs-xl;
     height: 100%;
     min-width: 50px;
   }

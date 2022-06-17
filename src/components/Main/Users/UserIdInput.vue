@@ -5,6 +5,7 @@
       @input="onInput"
       @keydown.enter="onSubmit"
     >
+
     <Button
       @click="onSubmit"
       :disabled="!userId"
@@ -44,36 +45,27 @@ export default {
 </script>
 
 <style lang="scss">
-$input-height: 32px;
+@import '~@/styles/variables.scss';
 
 .user-id-input {
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 6px;
+  grid-gap: $spacing-sm;
 
   > input {
     height: $input-height;
     line-height: $input-height;
-    border-radius: 6px;
+    border-radius: $border-radius-md;
     border: none;
-    font-size: 14px;
-    padding: 0 6px;
+    font-size: $fs-md;
+    padding: 0 $spacing-sm;
 
-    &:focus, &:focus-visible {
+    &:focus,
+    &:focus-visible {
       border: none;
       outline: none;
     }
   }
-
-  > button {
-    color: white;
-    border-radius: 6px;
-    border: none;
-    background-color: #08adcd;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
 }
 </style>

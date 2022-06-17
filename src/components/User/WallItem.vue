@@ -14,18 +14,18 @@
       <component
         v-for="(attachment, index) of formatAttachments(attachments)"
         :key="`${item.id}-attachment-${index}`"
-        class="wall-item__attachment"
         :is="attachment.component"
+        class="wall-item__attachment"
         :attachment="attachment.data"
       />
     </div>
 
     <div class="wall-item__footer">
       <div class="wall-item__counters">
-        <div class="wall-item__views">Просмотров: {{getViews(item)}}</div>
-        <div class="wall-item__likes">Лайков: {{getLikes(item)}}</div>
+        <div class="wall-item__views">Просмотров: {{ getViews(item) }}</div>
+        <div class="wall-item__likes">Лайков: {{ getLikes(item) }}</div>
       </div>
-      <div class="wall-item__date">{{getDate(item)}}</div>
+      <div class="wall-item__date">{{ getDate(item) }}</div>
     </div>
   </div>
 </template>
@@ -108,6 +108,8 @@ export default {
 <style lang="scss">
 @import '~@/styles/variables.scss';
 
+$attachment-preview-size: 100px;
+
 .wall-item {
   background-color: white;
   box-shadow: $box-shadow-xs;
@@ -137,8 +139,8 @@ export default {
   }
 
   &__attachment {
-    height: 100px;
-    width: 100px;
+    height: $attachment-preview-size;
+    width: $attachment-preview-size;
     overflow: hidden;
     border-radius: $border-radius-md;
     box-shadow: $box-shadow-sm;

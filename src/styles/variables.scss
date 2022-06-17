@@ -1,27 +1,23 @@
 $col-white: #ffffff;
-$col-black: #222222;
 $col-primary: #08adcd;
 $col-secondary: #228290;
-$col-success: #8cc63e;
-$col-warning: #ffd62e;
 $col-danger: #ff6601;
-$col-info: #909399;
-
 $col-bg: #e8e8e8;
+$col-box-shadow: rgba(0, 0, 0, 0.8);
 
 $spacing-xs: 4px;
 $spacing-sm: 6px;
 $spacing-md: 10px;
-$spacing-lg: 20px;
-$spacing-xl: 30px;
 
 $border-radius-sm: 4px;
 $border-radius-md: 6px;
-$border-radius-lg: 10px;
-$border-radius-xl: 16px;
 
-$box-shadow-xs: 0px 0px 8px -4px rgba(0, 0, 0, 0.8);
-$box-shadow-sm: 0px 0px 16px -8px rgba(0, 0, 0, 0.8);
-$box-shadow-md: 0px 0px 24px -12px rgba(0, 0, 0, 0.8);
-$box-shadow-lg: 0px 0px 32px -16px rgba(0, 0, 0, 0.8);
-$box-shadow-xl: 0px 0px 48px -24px rgba(0, 0, 0, 0.8);
+$box-shadow-xs: 0px 0px 8px -4px $col-box-shadow;
+$box-shadow-sm: 0px 0px 16px -8px $col-box-shadow;
+
+$input-height: 32px;
+
+$fs-sm: 12px;
+$fs-md: 14px;
+$fs-lg: 16px;
+$fs-xl: 20px;

@@ -32,12 +32,12 @@ export default {
 @import '~@/styles/variables.scss';
 
 .button {
-  color: white;
-  border-radius: 6px;
-  height: 32px;
+  color: $col-white;
+  border-radius: $border-radius-md;
+  height: $input-height;
   border: none;
   background-color: $col-primary;
-  font-size: 14px;
+  font-size: $fs-md;
   cursor: pointer;
 
   &.disabled {
